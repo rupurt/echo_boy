@@ -1,4 +1,5 @@
 # EchoBoy
+[![Build Status](https://circleci.com/gh/rupurt/echo_boy.svg?style=svg)](https://circleci.com/gh/rupurt/echo_boy)
 
 HTTP and WebSocket echo server as an OTP Application
 
