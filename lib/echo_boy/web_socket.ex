@@ -16,7 +16,13 @@ defmodule EchoBoy.WebSocket do
   end
 
   @doc """
-  Send the payload back to the client for echo commands.
+  Close the connection when the handler receives a 'close' message
+  """
+  def websocket_handle({:text, "close"}, req, state) do
+    {:shutdown, req, state}
+  end
+  @doc """
+  Send the payload back to the client for all other messages.
   Don't send a reply for other messages.
   """
   def websocket_handle({:text, message}, req, state) do
