@@ -20,9 +20,11 @@ defmodule EchoBoy.MixProject do
 
   defp deps do
     [
-      {:cowboy, "~> 1.0"},
-      {:plug, "~> 1.0"},
-      {:websockex, "~> 0.4", only: :test}
+      {:cowboy, "~> 2.5.0"},
+      {:plug, "~> 1.7.0"},
+      {:plug_cowboy, "~> 2.0.0"},
+      {:websockex, "~> 0.4", only: :test},
+      {:httpoison, "~> 1.4.0", only: [:dev, :test]}
     ]
   end
 end

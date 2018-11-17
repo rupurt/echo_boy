@@ -10,7 +10,7 @@ defmodule EchoBoyTest do
     end
 
     def handle_frame({_type, msg}, state) do
-      send :test, msg
+      send(:test, msg)
       {:ok, state}
     end
 
@@ -19,14 +19,14 @@ defmodule EchoBoyTest do
     end
 
     def handle_disconnect(conn_status, state) do
-      send :test, {:disconnected, conn_status}
+      send(:test, {:disconnected, conn_status})
       {:ok, state}
     end
   end
 
   setup do
-    Process.register self(), :test
-    url = "ws://localhost:#{EchoBoy.Config.port}/ws/"
+    Process.register(self(), :test)
+    url = "ws://localhost:#{EchoBoy.Config.port()}/ws/"
     {:ok, pid} = Client.start_link(url)
 
     {:ok, pid: pid}
