@@ -11,7 +11,7 @@ by adding `echo_boy` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:echo_boy, "~> 0.4.0"}
+    {:echo_boy, "~> 0.5.0"}
   ]
 end
 ```
