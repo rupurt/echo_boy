@@ -36,7 +36,7 @@ defmodule EchoBoy.MixProject do
     [
       {:cowboy, "~> 1.0.0"},
       {:plug, "~> 1.7.0"},
-      {:plug_cowboy, "~> 1.0.0"},
+      {:plug_cowboy, "~> 1.0"},
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:websockex, "~> 0.4", only: :test},
       {:httpoison, "~> 1.5.0", only: [:dev, :test]}
