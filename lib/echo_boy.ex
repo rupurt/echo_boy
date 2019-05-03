@@ -13,7 +13,8 @@ defmodule EchoBoy do
       )
     ]
 
-    {:ok, _} = Supervisor.start_link(children, strategy: :one_for_one, name: Tai.Supervisor)
+    opts = [strategy: :one_for_one, name: EchoBoy.Supervisor]
+    Supervisor.start_link(children, opts)
   end
 
   defp dispatch do
@@ -21,7 +22,8 @@ defmodule EchoBoy do
       {
         :_,
         [
-          {"/ws", EchoBoy.WebSocket, []}
+          {"/ws", EchoBoy.WebSocket, []},
+          {:_, Plug.Adapters.Cowboy.Handler, {EchoBoy.Router, []}}
         ]
       }
     ]
