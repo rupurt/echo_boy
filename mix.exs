@@ -5,7 +5,7 @@ defmodule EchoBoy.MixProject do
     [
       app: :echo_boy,
       version: "0.6.0",
-      elixir: "~> 1.6",
+      elixir: "~> 1.7",
       package: package(),
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -37,9 +37,11 @@ defmodule EchoBoy.MixProject do
       {:cowboy, "~> 2.6"},
       {:plug, "~> 1.8.0"},
       {:plug_cowboy, "~> 2.0"},
+      {:dialyxir, "~> 1.0", only: :dev, runtime: false},
+      {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev},
-      {:websockex, "~> 0.4", only: :test},
-      {:httpoison, "~> 1.5.0", only: [:dev, :test]}
+      {:httpoison, "~> 1.5.0", only: [:dev, :test]},
+      {:websockex, "~> 0.4", only: :test}
     ]
   end
 end
