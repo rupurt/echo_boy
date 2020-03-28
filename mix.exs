@@ -4,7 +4,7 @@ defmodule EchoBoy.MixProject do
   def project do
     [
       app: :echo_boy,
-      version: "0.6.0",
+      version: "0.6.1",
       elixir: "~> 1.7",
       package: package(),
       start_permanent: Mix.env() == :prod,
