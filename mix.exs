@@ -40,7 +40,7 @@ defmodule EchoBoy.MixProject do
       {:dialyxir, "~> 1.0", only: :dev, runtime: false},
       {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev},
-      {:httpoison, "~> 1.5.0", only: [:dev, :test]},
+      {:httpoison, "~> 1.6.2", only: [:dev, :test]},
       {:websockex, "~> 0.4", only: :test}
     ]
   end
