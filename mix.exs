@@ -35,7 +35,7 @@ defmodule EchoBoy.MixProject do
   defp deps do
     [
       {:cowboy, "~> 2.6"},
-      {:plug, "~> 1.8.0"},
+      {:plug, "~> 1.8"},
       {:plug_cowboy, "~> 2.0"},
       {:dialyxir, "~> 1.0", only: :dev, runtime: false},
       {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
